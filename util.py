@@ -35,7 +35,7 @@ def get_all_notebooks(url, path=''):
     
     Each item is a dict that includes "name" and "path" entries.
     """
-    notebooks = get_nblist(url, path)
+    notebooks = get_nblist(url, path)['content']
     dirs = [item['name'] for item in notebooks if item['type'] == 'directory']
 
     for d in dirs:
